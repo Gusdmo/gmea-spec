@@ -1,0 +1,52 @@
+{
+  "corrupted_payload": {
+    "error": "encoded payload hash mismatch",
+    "passed": false,
+    "returncode": 1
+  },
+  "invalid_block_uuidv7": {
+    "error": "block_id is not UUIDv7-compatible 16-byte value",
+    "passed": false,
+    "returncode": 1
+  },
+  "invalid_event_uuid": {
+    "error": "event_id is not UUIDv7-compatible 16-byte value",
+    "passed": false,
+    "returncode": 1
+  },
+  "malformed_stream_length": {
+    "error": "stream length exceeds payload",
+    "passed": false,
+    "returncode": 1
+  },
+  "merkle_mismatch": {
+    "error": "Merkle root mismatch",
+    "passed": false,
+    "returncode": 1
+  },
+  "missing_skim": {
+    "error": "PHYS-HYBRID block missing event_skim_l1_quote row",
+    "passed": false,
+    "returncode": 1
+  },
+  "noncanonical_header": {
+    "error": "PEB header JSON is not canonical",
+    "passed": false,
+    "returncode": 1
+  },
+  "skim_mismatch": {
+    "error": "event_skim_l1_quote mismatch",
+    "passed": false,
+    "returncode": 1
+  },
+  "unsupported_compression": {
+    "error": "unsupported compression: zstd",
+    "passed": false,
+    "returncode": 1
+  },
+  "wrong_stream_count": {
+    "error": "PEB payload has trailing bytes",
+    "passed": false,
+    "returncode": 1
+  }
+}

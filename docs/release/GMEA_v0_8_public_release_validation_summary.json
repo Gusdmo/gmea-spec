@@ -1,0 +1,199 @@
+{
+  "release": "GMEA v0.8 \u2014 Public Conformance-Testable Candidate",
+  "version": "0.8",
+  "pre_1_0": true,
+  "release_ready": true,
+  "schema_executes": true,
+  "schema_error": "",
+  "commands_passed": true,
+  "negative_corpus_passed": true,
+  "command_results": [
+    {
+      "label": "validate positive uncompressed",
+      "command": "python GMEA_reference_validator_v0_5.py validate GMEA_conformance_positive_peb_uncompressed_v0_8.gmea",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "{\n  \"checks\": [\n    \"application_id=GMEA\",\n    \"user_version>=8\",\n    \"required tables present\",\n    \"required indexes present\",\n    \"relational/PEB authority rule satisfied\",\n    \"PEB blocks validate\",\n    \"Merkle root validates\"\n  ],\n  \"passed\": true,\n  \"peb\": {\n    \"block_count\": 1,\n    \"blocks\": [\n      {\n        \"block_id_hex\": \"018f8b6b1fe773e780000000000003e8\",\n        \"compression\": \"none\",\n        \"event_count\": 3,\n        \"physical_profile\": \"GMEA-PHYS-HYBRID-v1\"\n      }\n    ],\n    \"merkle_root_hex\": \"ca8cd20605d5a5c4a1f4cd06485aac4124cd61dd71ef188da3d82688192d35b6\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "schema verify positive uncompressed",
+      "command": "python GMEA_reference_validator_v0_5.py schema-verify GMEA_conformance_positive_peb_uncompressed_v0_8.gmea",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "{\n  \"checks\": [\n    \"application_id=GMEA\",\n    \"user_version>=8\",\n    \"required tables present\",\n    \"required indexes present\",\n    \"relational/PEB authority rule satisfied\"\n  ],\n  \"passed\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "decode block positive uncompressed",
+      "command": "python GMEA_reference_validator_v0_5.py decode-block GMEA_conformance_positive_peb_uncompressed_v0_8.gmea",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "{\n  \"block_id_hex\": \"018f8b6b1fe773e780000000000003e8\",\n  \"compression\": \"none\",\n  \"events\": [\n    {\n      \"ask_mantissa\": {\n        \"t\": \"int\",\n        \"v\": \"108520\"\n      },\n      \"bid_mantissa\": {\n        \"t\": \"int\",\n        \"v\": \"108500\"\n      },\n      \"canonical_utc_time_ns\": {\n        \"t\": \"int\",\n        \"v\": \"1767225600000000000\"\n      },\n      \"event_id\": {\n        \"t\": \"uuidv7\",\n        \"v\": \"018f8b6b1c0170018000000000000002\"\n      },\n      \"flags\": {\n        \"t\": \"int\",\n        \"v\": \"1\"\n      },\n      \"price_scale\": {\n        \"t\": \"int\",\n        \"v\": \"-5\"\n      },\n      \"profile_id\": {\n        \"t\": \"text\",\n        \"v\": \"l1_quote\"\n      },\n      \"source_row_number\": {\n        \"t\": \"int\",\n        \"v\": \"1\"\n      }\n    },\n    {\n      \"ask_mantissa\": {\n        \"t\": \"int\",\n        \"v\": \"108521\"\n      },\n      \"bid_mantissa\": {\n        \"t\": \"int\",\n        \"v\": \"108501\"\n      },\n      \"canonical_utc_time_ns\": {\n        \"t\": \"int\",\n        \"v\": \"1767225601000000000\"\n      },\n      \"event_id\": {\n        \"t\": \"uuidv7\",\n        \"v\": \"018f8b6b1c0270028000000000000003\"\n      },\n      \"flags\": {\n        \"t\": \"int\",\n        \"v\": \"1\"\n      },\n      \"price_scale\": {\n        \"t\": \"int\",\n        \"v\": \"-5\"\n      },\n      \"profile_id\": {\n        \"t\": \"text\",\n        \"v\": \"l1_quote\"\n      },\n      \"source_row_number\": {\n        \"t\": \"int\",\n        \"v\": \"2\"\n      }\n    },\n    {\n      \"ask_mantissa\": {\n        \"t\": \"int\",\n        \"v\": \"108520\"\n      },\n      \"bid_mantissa\": {\n        \"t\": \"int\",\n        \"v\": \"108500\"\n      },\n      \"canonical_utc_time_ns\": {\n        \"t\": \"int\",\n        \"v\": \"1767225602000000000\"\n      },\n      \"event_id\": {\n        \"t\": \"uuidv7\",\n        \"v\": \"018f8b6b1c0370038000000000000004\"\n      },\n      \"flags\": {\n        \"t\": \"int\",\n        \"v\": \"3\"\n      },\n      \"price_scale\": {\n        \"t\": \"int\",\n        \"v\": \"-5\"\n      },\n      \"profile_id\": {\n        \"t\": \"text\",\n        \"v\": \"l1_quote\"\n      },\n      \"source_row_number\": {\n        \"t\": \"int\",\n        ",
+      "stderr": ""
+    },
+    {
+      "label": "validate positive deflate",
+      "command": "python GMEA_reference_validator_v0_5.py validate GMEA_conformance_positive_peb_deflate_v0_8.gmea",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "{\n  \"checks\": [\n    \"application_id=GMEA\",\n    \"user_version>=8\",\n    \"required tables present\",\n    \"required indexes present\",\n    \"relational/PEB authority rule satisfied\",\n    \"PEB blocks validate\",\n    \"Merkle root validates\"\n  ],\n  \"passed\": true,\n  \"peb\": {\n    \"block_count\": 1,\n    \"blocks\": [\n      {\n        \"block_id_hex\": \"018f8b6b1fe773e780000000000003e8\",\n        \"compression\": \"deflate\",\n        \"event_count\": 3,\n        \"physical_profile\": \"GMEA-PHYS-HYBRID-v1\"\n      }\n    ],\n    \"merkle_root_hex\": \"4c6809f8c489d0e847f166852842432fecc5bd73d50a094df2b9828a78f82569\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "negative corrupted_payload fail-closed",
+      "command": "python GMEA_reference_validator_v0_5.py validate GMEA_negative_v0_8_corrupted_payload.gmea",
+      "returncode": 1,
+      "passed": true,
+      "stdout": "{\n  \"error\": \"encoded payload hash mismatch\",\n  \"passed\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "negative invalid_block_uuidv7 fail-closed",
+      "command": "python GMEA_reference_validator_v0_5.py validate GMEA_negative_v0_8_invalid_block_uuidv7.gmea",
+      "returncode": 1,
+      "passed": true,
+      "stdout": "{\n  \"error\": \"block_id is not UUIDv7-compatible 16-byte value\",\n  \"passed\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "negative invalid_event_uuid fail-closed",
+      "command": "python GMEA_reference_validator_v0_5.py validate GMEA_negative_v0_8_invalid_event_uuid.gmea",
+      "returncode": 1,
+      "passed": true,
+      "stdout": "{\n  \"error\": \"event_id is not UUIDv7-compatible 16-byte value\",\n  \"passed\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "negative malformed_stream_length fail-closed",
+      "command": "python GMEA_reference_validator_v0_5.py validate GMEA_negative_v0_8_malformed_stream_length.gmea",
+      "returncode": 1,
+      "passed": true,
+      "stdout": "{\n  \"error\": \"stream length exceeds payload\",\n  \"passed\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "negative merkle_mismatch fail-closed",
+      "command": "python GMEA_reference_validator_v0_5.py validate GMEA_negative_v0_8_merkle_mismatch.gmea",
+      "returncode": 1,
+      "passed": true,
+      "stdout": "{\n  \"error\": \"Merkle root mismatch\",\n  \"passed\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "negative missing_skim fail-closed",
+      "command": "python GMEA_reference_validator_v0_5.py validate GMEA_negative_v0_8_missing_skim.gmea",
+      "returncode": 1,
+      "passed": true,
+      "stdout": "{\n  \"error\": \"PHYS-HYBRID block missing event_skim_l1_quote row\",\n  \"passed\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "negative noncanonical_header fail-closed",
+      "command": "python GMEA_reference_validator_v0_5.py validate GMEA_negative_v0_8_noncanonical_header.gmea",
+      "returncode": 1,
+      "passed": true,
+      "stdout": "{\n  \"error\": \"PEB header JSON is not canonical\",\n  \"passed\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "negative skim_mismatch fail-closed",
+      "command": "python GMEA_reference_validator_v0_5.py validate GMEA_negative_v0_8_skim_mismatch.gmea",
+      "returncode": 1,
+      "passed": true,
+      "stdout": "{\n  \"error\": \"event_skim_l1_quote mismatch\",\n  \"passed\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "negative unsupported_compression fail-closed",
+      "command": "python GMEA_reference_validator_v0_5.py validate GMEA_negative_v0_8_unsupported_compression.gmea",
+      "returncode": 1,
+      "passed": true,
+      "stdout": "{\n  \"error\": \"unsupported compression: zstd\",\n  \"passed\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "negative wrong_stream_count fail-closed",
+      "command": "python GMEA_reference_validator_v0_5.py validate GMEA_negative_v0_8_wrong_stream_count.gmea",
+      "returncode": 1,
+      "passed": true,
+      "stdout": "{\n  \"error\": \"PEB payload has trailing bytes\",\n  \"passed\": false\n}\n",
+      "stderr": ""
+    }
+  ],
+  "negative_results": [
+    {
+      "case": "corrupted_payload",
+      "archive": "GMEA_negative_v0_8_corrupted_payload.gmea",
+      "expected_error": "encoded payload hash mismatch",
+      "returncode": 1,
+      "passed": true
+    },
+    {
+      "case": "invalid_block_uuidv7",
+      "archive": "GMEA_negative_v0_8_invalid_block_uuidv7.gmea",
+      "expected_error": "block_id is not UUIDv7-compatible 16-byte value",
+      "returncode": 1,
+      "passed": true
+    },
+    {
+      "case": "invalid_event_uuid",
+      "archive": "GMEA_negative_v0_8_invalid_event_uuid.gmea",
+      "expected_error": "event_id is not UUIDv7-compatible 16-byte value",
+      "returncode": 1,
+      "passed": true
+    },
+    {
+      "case": "malformed_stream_length",
+      "archive": "GMEA_negative_v0_8_malformed_stream_length.gmea",
+      "expected_error": "stream length exceeds payload",
+      "returncode": 1,
+      "passed": true
+    },
+    {
+      "case": "merkle_mismatch",
+      "archive": "GMEA_negative_v0_8_merkle_mismatch.gmea",
+      "expected_error": "Merkle root mismatch",
+      "returncode": 1,
+      "passed": true
+    },
+    {
+      "case": "missing_skim",
+      "archive": "GMEA_negative_v0_8_missing_skim.gmea",
+      "expected_error": "PHYS-HYBRID block missing event_skim_l1_quote row",
+      "returncode": 1,
+      "passed": true
+    },
+    {
+      "case": "noncanonical_header",
+      "archive": "GMEA_negative_v0_8_noncanonical_header.gmea",
+      "expected_error": "PEB header JSON is not canonical",
+      "returncode": 1,
+      "passed": true
+    },
+    {
+      "case": "skim_mismatch",
+      "archive": "GMEA_negative_v0_8_skim_mismatch.gmea",
+      "expected_error": "event_skim_l1_quote mismatch",
+      "returncode": 1,
+      "passed": true
+    },
+    {
+      "case": "unsupported_compression",
+      "archive": "GMEA_negative_v0_8_unsupported_compression.gmea",
+      "expected_error": "unsupported compression: zstd",
+      "returncode": 1,
+      "passed": true
+    },
+    {
+      "case": "wrong_stream_count",
+      "archive": "GMEA_negative_v0_8_wrong_stream_count.gmea",
+      "expected_error": "PEB payload has trailing bytes",
+      "returncode": 1,
+      "passed": true
+    }
+  ],
+  "notes": [
+    "README.md and public release checklist added for final GitHub release packaging."
+  ]
+}

@@ -1,0 +1,24 @@
+name: Validate GMEA v0.8
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Compile validator
+        run: python -m py_compile tools/python/GMEA_reference_validator_v0_5.py
+      - name: Validate positive uncompressed
+        run: python tools/python/GMEA_reference_validator_v0_5.py validate testdata/positive/GMEA_conformance_positive_peb_uncompressed_v0_8.gmea
+      - name: Validate positive deflate
+        run: python tools/python/GMEA_reference_validator_v0_5.py validate testdata/positive/GMEA_conformance_positive_peb_deflate_v0_8.gmea
+      - name: Schema verify
+        run: python tools/python/GMEA_reference_validator_v0_5.py schema-verify testdata/positive/GMEA_conformance_positive_peb_uncompressed_v0_8.gmea
+      - name: Decode block
+        run: python tools/python/GMEA_reference_validator_v0_5.py decode-block testdata/positive/GMEA_conformance_positive_peb_uncompressed_v0_8.gmea

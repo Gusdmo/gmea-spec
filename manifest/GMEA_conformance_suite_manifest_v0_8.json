@@ -1,0 +1,55 @@
+{
+  "name": "GMEA v0.8 conformance-testable candidate",
+  "version": "0.8",
+  "status": "pre-1.0",
+  "schema_file": "GMEA_schema_v1_candidate_v0_8.sql",
+  "validator": "GMEA_reference_validator_v0_5.py",
+  "physical_profile": "GMEA-PHYS-HYBRID-v1",
+  "positive_archives": [
+    "GMEA_conformance_positive_peb_uncompressed_v0_8.gmea",
+    "GMEA_conformance_positive_peb_deflate_v0_8.gmea"
+  ],
+  "negative_archives": [
+    "GMEA_negative_v0_8_corrupted_payload.gmea",
+    "GMEA_negative_v0_8_invalid_block_uuidv7.gmea",
+    "GMEA_negative_v0_8_invalid_event_uuid.gmea",
+    "GMEA_negative_v0_8_malformed_stream_length.gmea",
+    "GMEA_negative_v0_8_merkle_mismatch.gmea",
+    "GMEA_negative_v0_8_missing_skim.gmea",
+    "GMEA_negative_v0_8_noncanonical_header.gmea",
+    "GMEA_negative_v0_8_skim_mismatch.gmea",
+    "GMEA_negative_v0_8_unsupported_compression.gmea",
+    "GMEA_negative_v0_8_wrong_stream_count.gmea"
+  ],
+  "expected_negative_results": "GMEA_negative_corpus_v0_8_expected.json",
+  "validator_outputs": [
+    "GMEA_conformance_positive_peb_deflate_v0_8_validator_output.json",
+    "GMEA_conformance_positive_peb_uncompressed_v0_8_decode_block_output.json",
+    "GMEA_conformance_positive_peb_uncompressed_v0_8_schema_verify_output.json",
+    "GMEA_conformance_positive_peb_uncompressed_v0_8_validator_output.json",
+    "GMEA_negative_v0_8_corrupted_payload_validator_output.json",
+    "GMEA_negative_v0_8_invalid_block_uuidv7_validator_output.json",
+    "GMEA_negative_v0_8_invalid_event_uuid_validator_output.json",
+    "GMEA_negative_v0_8_malformed_stream_length_validator_output.json",
+    "GMEA_negative_v0_8_merkle_mismatch_validator_output.json",
+    "GMEA_negative_v0_8_missing_skim_validator_output.json",
+    "GMEA_negative_v0_8_noncanonical_header_validator_output.json",
+    "GMEA_negative_v0_8_skim_mismatch_validator_output.json",
+    "GMEA_negative_v0_8_unsupported_compression_validator_output.json",
+    "GMEA_negative_v0_8_wrong_stream_count_validator_output.json"
+  ],
+  "commands": [
+    "python GMEA_reference_validator_v0_5.py validate GMEA_conformance_positive_peb_uncompressed_v0_8.gmea",
+    "python GMEA_reference_validator_v0_5.py schema-verify GMEA_conformance_positive_peb_uncompressed_v0_8.gmea",
+    "python GMEA_reference_validator_v0_5.py decode-block GMEA_conformance_positive_peb_uncompressed_v0_8.gmea",
+    "python GMEA_reference_validator_v0_5.py validate GMEA_conformance_positive_peb_deflate_v0_8.gmea",
+    "python GMEA_reference_validator_v0_5.py validate GMEA_negative_v0_8_<case>.gmea"
+  ],
+  "not_v1_0": true,
+  "release_readme": "README.md",
+  "release_checklist": "GMEA_v0_8_public_release_checklist.md",
+  "public_release_title": "GMEA v0.8 \u2014 Public Conformance-Testable Candidate",
+  "release_ready": true,
+  "public_release_validation_summary": "GMEA_v0_8_public_release_validation_summary.json",
+  "asset_index": "GMEA_v0_8_public_release_asset_index.md"
+}

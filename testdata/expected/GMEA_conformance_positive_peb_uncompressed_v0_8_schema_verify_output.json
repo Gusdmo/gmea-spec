@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "application_id=GMEA",
+    "user_version>=8",
+    "required tables present",
+    "required indexes present",
+    "relational/PEB authority rule satisfied"
+  ],
+  "passed": true
+}

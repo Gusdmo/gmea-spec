@@ -1,0 +1,24 @@
+{
+  "checks": [
+    "application_id=GMEA",
+    "user_version>=8",
+    "required tables present",
+    "required indexes present",
+    "relational/PEB authority rule satisfied",
+    "PEB blocks validate",
+    "Merkle root validates"
+  ],
+  "passed": true,
+  "peb": {
+    "block_count": 1,
+    "blocks": [
+      {
+        "block_id_hex": "018f8b6b1fe773e780000000000003e8",
+        "compression": "deflate",
+        "event_count": 3,
+        "physical_profile": "GMEA-PHYS-HYBRID-v1"
+      }
+    ],
+    "merkle_root_hex": "4c6809f8c489d0e847f166852842432fecc5bd73d50a094df2b9828a78f82569"
+  }
+}

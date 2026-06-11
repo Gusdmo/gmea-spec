@@ -1,0 +1,8 @@
+GMEA — Generalized Market Event Archive
+
+Licensing split:
+- Specifications and documentation: Creative Commons Attribution 4.0 International (CC BY 4.0)
+- Reference validator/source code: Apache License 2.0
+- Test corpus: CC BY 4.0 for conformance and interoperability testing
+
+This repository contains GMEA v0.8, a pre-1.0 public conformance-testable candidate.

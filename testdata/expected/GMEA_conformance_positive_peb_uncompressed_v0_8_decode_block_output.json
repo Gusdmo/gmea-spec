@@ -1,0 +1,156 @@
+{
+  "block_id_hex": "018f8b6b1fe773e780000000000003e8",
+  "compression": "none",
+  "events": [
+    {
+      "ask_mantissa": {
+        "t": "int",
+        "v": "108520"
+      },
+      "bid_mantissa": {
+        "t": "int",
+        "v": "108500"
+      },
+      "canonical_utc_time_ns": {
+        "t": "int",
+        "v": "1767225600000000000"
+      },
+      "event_id": {
+        "t": "uuidv7",
+        "v": "018f8b6b1c0170018000000000000002"
+      },
+      "flags": {
+        "t": "int",
+        "v": "1"
+      },
+      "price_scale": {
+        "t": "int",
+        "v": "-5"
+      },
+      "profile_id": {
+        "t": "text",
+        "v": "l1_quote"
+      },
+      "source_row_number": {
+        "t": "int",
+        "v": "1"
+      }
+    },
+    {
+      "ask_mantissa": {
+        "t": "int",
+        "v": "108521"
+      },
+      "bid_mantissa": {
+        "t": "int",
+        "v": "108501"
+      },
+      "canonical_utc_time_ns": {
+        "t": "int",
+        "v": "1767225601000000000"
+      },
+      "event_id": {
+        "t": "uuidv7",
+        "v": "018f8b6b1c0270028000000000000003"
+      },
+      "flags": {
+        "t": "int",
+        "v": "1"
+      },
+      "price_scale": {
+        "t": "int",
+        "v": "-5"
+      },
+      "profile_id": {
+        "t": "text",
+        "v": "l1_quote"
+      },
+      "source_row_number": {
+        "t": "int",
+        "v": "2"
+      }
+    },
+    {
+      "ask_mantissa": {
+        "t": "int",
+        "v": "108520"
+      },
+      "bid_mantissa": {
+        "t": "int",
+        "v": "108500"
+      },
+      "canonical_utc_time_ns": {
+        "t": "int",
+        "v": "1767225602000000000"
+      },
+      "event_id": {
+        "t": "uuidv7",
+        "v": "018f8b6b1c0370038000000000000004"
+      },
+      "flags": {
+        "t": "int",
+        "v": "3"
+      },
+      "price_scale": {
+        "t": "int",
+        "v": "-5"
+      },
+      "profile_id": {
+        "t": "text",
+        "v": "l1_quote"
+      },
+      "source_row_number": {
+        "t": "int",
+        "v": "3"
+      }
+    }
+  ],
+  "header": {
+    "arrow_schema": {
+      "fields": [
+        {
+          "name": "event_id",
+          "type": "fixed_size_binary[16]"
+        },
+        {
+          "name": "canonical_utc_time_ns",
+          "type": "int64"
+        },
+        {
+          "name": "bid_mantissa",
+          "type": "int64"
+        },
+        {
+          "name": "ask_mantissa",
+          "type": "int64"
+        },
+        {
+          "name": "flags",
+          "type": "uint8"
+        },
+        {
+          "name": "source_row_number",
+          "type": "uint64"
+        }
+      ]
+    },
+    "base_ask_mantissa": 108520,
+    "base_bid_mantissa": 108500,
+    "base_canonical_utc_ns": 1767225600000000000,
+    "encoding_profile": "GMEA-PEB-v1",
+    "event_count": 3,
+    "little_endian": true,
+    "peb_header_canonicalization": "GMEA-CJ-v1/RFC8785-aligned",
+    "price_scale": -5,
+    "profile_id": "l1_quote",
+    "stream_order": [
+      "event_id_uuidv7",
+      "canonical_utc_delta_ns",
+      "bid_delta",
+      "ask_delta",
+      "flags",
+      "source_row_number_delta"
+    ],
+    "wire_version": 1
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "error": "unsupported compression: zstd",
+  "passed": false
+}
